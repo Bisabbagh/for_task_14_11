@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #textSection {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <label>
+            <input type="checkbox" id="boldCheckbox" onchange="applyStyle()"> Bold
+        </label>
+        <label>
+            <input type="checkbox" id="italicCheckbox" onchange="applyStyle()"> Italic
+        </label>
+        <label>
+            <input type="checkbox" id="underlineCheckbox" onchange="applyStyle()"> Underline
+        </label>
+
+        <label> Font Size:
+            <select id="fontSizeSelect" onchange="applyStyle()">
+                <option value="16">Normal</option>
+                <option value="18">Medium</option>
+                <option value="20">Large</option>
+            </select>
+        </label>
+
+        <label> Font Family:
+            <select id="fontFamilySelect" onchange="applyStyle()">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Courier New, monospace">Courier New</option>
+            </select>
+        </label>
+    </div>
+
+    <div id="textSection">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, molestias ratione? Accusantium architecto rerum aliquid quas reiciendis illum repudiandae soluta illo corrupti similique dignissimos facere dolorum, itaque magnam minima blanditiis?
+    </div>
+
+
     
 </body>
+<script>
+    function applyStyle() {
+        const textSection = document.getElementById('textSection');
+        const boldCheckbox = document.getElementById('boldCheckbox');
+        const italicCheckbox = document.getElementById('italicCheckbox');
+        const underlineCheckbox = document.getElementById('underlineCheckbox');
+        const fontSizeSelect = document.getElementById('fontSizeSelect');
+        const fontFamilySelect = document.getElementById('fontFamilySelect');
+
+         textSection.style.fontWeight = boldCheckbox.checked ? 'bold' : 'normal';
+        textSection.style.fontStyle = italicCheckbox.checked ? 'italic' : 'normal';
+        textSection.style.textDecoration = underlineCheckbox.checked ? 'underline' : 'none';
+        textSection.style.fontSize = fontSizeSelect.value + 'px';
+        textSection.style.fontFamily = fontFamilySelect.value;
+    }
+</script>
 </html>

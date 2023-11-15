@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #moreContent {
+            display: none;
+        }
+
+        #toggleLink {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="Content" style="background-color: aqua; width: 50%; height: 40px;">
+        Additional content that is initially hidden. <br>
+        <a id="toggleLink" onclick="toggleContent()">Show More</a>
+
+    </p>
+    <p id="moreContent" style="background-color: pink; width: 50%;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a risus in nulla consequat
+        fermentum. Sed hendrerit sem vel eros fermentum, vitae interdum sem luctus. Integer vel
+        fringilla sem. Donec nec leo nec est accumsan tincidunt. Fusce cursus consequat ultricies.
+    </p>
+   
+
+
+    
+
+    
+    
+</body>
+<script>
+    function toggleContent() {
+        const moreContent = document.getElementById('moreContent');
+        const toggleLink = document.getElementById('toggleLink');
+
+        // Toggle the visibility of additional content
+        if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'block';
+            toggleLink.textContent = 'Show Less';
+        } else {
+            moreContent.style.display = 'none';
+            toggleLink.textContent = 'Show More';
+        }
+    }
+    function toggleContent1() {
+        const moreContent = document.getElementById('moreContent1');
+        const toggleLink = document.getElementById('toggleLink');
+
+        // Toggle the visibility of additional content
+        if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'block';
+            toggleLink.textContent = 'Show Less';
+        } else {
+            moreContent.style.display = 'none';
+            toggleLink.textContent = 'Show More';
+        }
+    }
+</script>
+</html>
