@@ -9,37 +9,37 @@
     
         <select name="flag" id="flag" onchange="change()">
           <option value="Jordan" id="Jordan" >Jordan <img src="th.png"></option>
-          <option value="amer" id="amer">amer </option>
+          <option value="Qatar" id="Qatar">Qatar </option>
           <option value="Lebenon" id="Lebenon">lebenon</option>
-          <option value="Kute" id="Kute">Kute</option>
+          <option value="Kuwait" id="Kuwait">Kuwait</option>
         </select>
         <p id="jj">
-            <img src="th.png">
+            
 
         </p>
 
-        <p id="aa">
-            asdsadasd
-
-        </p>
+        
        
 </body>
 <script>
     function change(){
-        var x=document.getElementById("flag");
+
+        var x=document.getElementById("flag").value;
+        var c=document.getElementById("jj");
+
 
         switch (x) {
   case "Jordan":
-    document.getElementById("jj").innerHTML;
+   c.innerHTML='<img src="th.png">'
+       break;
+  case "Qatar":
+   c.innerHTML='<img src="Qatar.png">'
     break;
-  case "amer":
-  document.getElementById("aa").innerHTML; ;
+  case "Lebenon":
+   c.innerHTML='<img src="Lebenon.png">';
     break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
+  case "Kuwait":
+   c.innerHTML='<img src="Kuwait.png">';
     break;
  
  

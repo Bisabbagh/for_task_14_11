@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="ps1" id="ps">password(min 6characters):</label>
+    <input type="password" id="ps1" onchange="limmet()" >
+   
+    <label id="demo" style="color: red;">
+    </label>
+    <br>
+    <label for="ps1"> Reapet password:</label>
+    <input type="password" id="ps2" onchange="limmet1()" >
+    <label id="demo1" style="color: red;"></label>
+
+</body>
+<script>
+    function limmet(){
+        var x=document.getElementById("ps1").value;
+        
+
+        var z=document.getElementById("demo");
+        
+
+        for (var i=0;i<x.length;i++){
+            if(x.length<6){
+                return z.innerHTML="less more than";
+}
+else{
+    return z.innerHTML="Paass"
+}
+}
+    
+    }
+    function limmet1(){
+        var x=document.getElementById("ps1").value;
+        var y=document.getElementById("ps2").value;
+        var v=document.getElementById("demo1");
+        if(x==y){
+        return v.innerHTML="pass"
+
+    }
+    else{
+        return v.innerHTML="repeat the password"
+    }
+
+
+    }
+
+</script>
+</html>
